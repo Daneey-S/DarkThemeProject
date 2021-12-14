@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme Proj</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+          <img src="images/logo blue.svg" class="logo" alt="logo">  
+          <ul id="menulist">
+              <li><a href="">HOME</a></li>
+              <li><a href="">ABOUT</a></li>
+              <li><a href="">PORTFOLIO</a></li>
+              <li><a href="">SERVICES</a></li>
+              <li><a href="">HIRE ME</a></li>
+          </ul>
+          <img src="images/moon.png" id="icon" alt="moon">
+          
+        </nav>
+        
+        <div class="info">
+            <h1>I'm <span>Danish</span> Sayeed</h1>
+            <p>This is my official portfolio website to showcase
+                all my work related to <br> Web Development and UI Design</p>
+            <a href="CV_DanishSayeed EMU.docx"><button type="button">Download CV <img src="images/arrow black.svg"></button></a>
+        </div>
+        <div class="img-box">
+            <img src="images/tri blue.svg" class="tri-1">
+            <img src="images/tri blue.svg" class="tri-2">
+            <img src="images/tri blue.svg" class="tri-3">
+        </div>
+        <div class="social-links">
+            <img src="images/linkedin.svg" alt="Linkedin">
+            <img src="images/facebook.svg" alt="Facebook">
+            <img src="images/instagram.svg" alt="Instagram">
+        </div>
+    </div> 
+    <div class="secondary-container"></div>
+<script>
+    var icon = document.querySelector("#icon");
+
+    icon.onclick = function() {
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "images/sun.png";
+        }else{
+            icon.src = "images/moon.png";
+        }
+    }
+    var menuList = document.querySelector("#menulist");
+
+    menuList.style.maxHight = "0px";
+
+    function togglemenu(){
+        if(menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHight ="130px";
+        }
+        else{
+            menuList.style.mexHight = "0px";
+        }
+    }
+</script>
+</body>
+</html>

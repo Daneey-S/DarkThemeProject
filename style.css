@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: var(--primary-color);
+    font-family: calibri;
+    position: relative;
+}
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+.dark-theme{
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
+}
+
+#icon{
+    width: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+nav ul li a:hover{
+    color:#516beb;
+}
+.menu-icon{
+    width: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+   
+}
+.info{
+    max-width: 50%;
+    margin-left: 8%;
+    margin-top: 15%;
+    z-index: 9;
+  
+
+}
+.info h1{
+    font-size: 70px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+span{
+    color: #516beb;
+}
+.info p{
+    color: var(--secondary-color);
+    line-height: 22px;
+}
+.info a{
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: var(--secondary-color);
+    background: linear-gradient(to right, var(--primary-color),#516beb);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+button img{
+    width: 20px;
+    display: none;
+
+}
+button:hover img{
+    display: block;
+}
+button:hover{
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.img-box{
+    max-width: 50%;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+   
+}
+
+.img-box .tri-1{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: translateX(-50%);
+    transition: bottom 1s;
+}
+.img-box .tri-2{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s;
+}
+.img-box .tri-3{
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    transition: bottom 1s;
+}
+
+.img-box:hover .tri-1{
+    bottom: 200px;
+    left: 0;
+
+}
+.img-box:hover .tri-2{
+    bottom: 300px;
+    left:50%;
+}
+.img-box:hover .tri-3{
+    bottom: 100px;
+    left: 100%;
+}
+.social-links img{
+    height: 15px;
+    margin: 10px;
+    padding-left: 8%;
+    cursor: pointer;
+}
+.social-links{
+    text-align:left;
+}
+
+.secondary-container{
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, var(--primary-color),#516beb);
+    overflow: hidden;
+    font-family: calibri;
+    position: relative;
+}
+@media only screen and (max-width:700px) {
+
+    nav ul{
+        width: 100%;
+        border-color: var(--primary-color);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: var(--secondary-color);
+    }
+    .menu-icon{
+        display: block;
+        align-items: right;
+    }
+    .img-box{
+    
+        opacity: 0.5;
+        z-index: 3;
+
+    }
+    .img-box .tri-1{
+        transform: none;
+        transition: none;
+    }
+    .img-box .tri-2{
+        transform: none;
+        transition: none;
+    }
+    .img-box .tri-3{
+        transform: none;
+        transition: none;
+
+    }
+    .img-box:hover .tri-1{
+        bottom: none;
+        left: none;
+    
+    }
+    .img-box:hover .tri-2{
+        bottom: none;
+        left: none;
+    }
+    .img-box:hover .tri-3{
+        bottom: none;
+        left: none;
+    }
+    #icon{
+        width: 30px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
